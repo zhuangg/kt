@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="jquery.min.js"></script>
     <style>
         body{
             margin: 0;
         }
         .check-con{
-            min-width: 1920px;
-            height: 870px;
+            width: 100%;
+            height: 43.5rem;
             background: url("check_jf.png");
             background-size: 100% 100%;
-            margin: 22px auto 0;
+            margin: 1.1rem auto 0;
         }
         .check-box{
-            width: 396px;
+            width: 19.8rem;
             position: relative;
-            top: 209px;
-            left: 355px;
+            top: 10.45rem;
+            left: 17.75rem;
         }
         .check-tit{
             color: #976029;
-            font-size: 66px;
+            font-size: 3.3rem;
+            font-weight: 500;
         }
         .check-info{
             color: #333;
-            font-size: 28px;
-            line-height: 44px;
-            margin: 19px 0 30px;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            margin: .95rem 0 1.5rem;
         }
         .check-btn{
-            width:383px;
-            height:87px;
-            line-height: 87px;
+            width:19.15rem;
+            height:4.35rem;
+            line-height: 4.35rem;
             color: #fff;
-            font-size: 34px;
+            font-size: 1.7rem;
             text-align: center;
             background:linear-gradient(270deg,rgba(216,172,129,1) 0%,rgba(193,140,85,1) 100%);
-            border-radius:44px;
+            border-radius:2.2rem;
+        }
+        @media screen and (min-width: 1920px){
+            .check-con{
+                width: 1920px;
+            }
         }
 
     </style>
+    <script type="text/javascript" charset="utf-8">
+        $(setRem());
+        $(window).resize(function(){
+            setRem()
+        });
+        function setRem(){
+            var w=parseFloat($('html').css('width'));
+            $('html').css('font-size',w/1920*20+'px');
+        }
+    </script>
 </head>
 <body>
     <div class="check-con">
